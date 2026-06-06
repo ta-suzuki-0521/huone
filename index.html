@@ -131,6 +131,7 @@
       transition: color 0.5s ease;
       white-space: nowrap;
       cursor: pointer;
+      line-height: 1;
     }
 
     /* 長体 103% — transform-originをtopに統一してtop基準で揃える */
@@ -142,6 +143,7 @@
       display: inline-block;
       transform: scaleY(1.03);
       transform-origin: center top;
+      vertical-align: top;
     }
 
     /* ── ナビゲーション ── */
@@ -223,7 +225,7 @@
       left: 36px;
       display: flex;
       flex-direction: row;
-      align-items: center;
+      align-items: flex-start;
       gap: 28px;
     }
 
