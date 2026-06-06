@@ -131,16 +131,12 @@
       white-space: nowrap;
       cursor: pointer;
       line-height: 1;
+      display: flex;
+      align-items: center;
+      height: 19.5px;
     }
 
-    /* nav要素 baseline統一 */
-    .nav-menu-btn,
-    .nav-close-btn,
-    .nav-links a,
-    .about-close,
-    .about-nav-label a {
-      display: inline-block;
-    }
+    /* nav要素 垂直位置統一（flexで管理） */
 
     /* ── ナビゲーション ── */
     /* 斜線ホバーエフェクト共通 */
@@ -179,6 +175,9 @@
       cursor: pointer;
       padding: 0;
       line-height: 1;
+      display: flex;
+      align-items: center;
+      height: 19.5px;
       transition: color 0.5s ease;
     }
 
@@ -211,6 +210,9 @@
       cursor: pointer;
       padding: 0;
       line-height: 1;
+      display: flex;
+      align-items: center;
+      height: 19.5px;
       transition: color 0.5s ease;
     }
 
@@ -266,9 +268,12 @@
     }
     /* メニューと同じ位置にAboutを固定 */
     .about-nav-label {
-      position: absolute;
-      top: 22px;
+      position: fixed;
+      top: 20px;
       left: 36px;
+      display: flex;
+      align-items: center;
+      height: 19.5px;
     }
     .about-nav-label a {
       font-family: 'DM Sans', sans-serif;
@@ -278,11 +283,12 @@
       color: #c8d4d4;
       text-decoration: none;
       line-height: 1;
+      display: block;
       transition: color 0.5s ease;
     }
     .about-close {
-      position: absolute;
-      top: 22px;
+      position: fixed;
+      top: 20px;
       right: 36px;
       font-family: 'DM Sans', sans-serif;
       font-weight: 400;
@@ -294,6 +300,9 @@
       cursor: pointer;
       padding: 0;
       line-height: 1;
+      display: flex;
+      align-items: center;
+      height: 19.5px;
       transition: color 0.5s ease;
     }
     .about-text-ja {
@@ -381,10 +390,17 @@
       .about-inner { margin-top: 20px; }
       .about-text-ja,
       .about-text-en { font-size: 14.3px; line-height: 1.85; }
-      .about-close { top: 20px; right: 20px; }
-      .about-nav-label { top: 20px; left: 20px; }
-      .about-nav-label a { font-size: 16px; }
-      .about-close,
+      .about-close {
+        top: 20px;
+        right: 20px;
+        font-size: 16px !important;
+        height: 16px;
+      }
+      .about-nav-label {
+        top: 20px;
+        left: 20px;
+        height: 16px;
+      }
       .about-nav-label a { font-size: 16px !important; line-height: 1; }
     }
 
@@ -429,6 +445,7 @@
         transform: translateX(-50%);
         font-size: 16px;
         line-height: 1;
+        height: 16px;
       }
 
       /* Menuボタン */
@@ -437,6 +454,7 @@
         right: 20px;
         font-size: 16px;
         line-height: 1;
+        height: 16px;
       }
       /* Closeボタン */
       .nav-close-btn {
@@ -444,6 +462,7 @@
         right: 20px;
         font-size: 16px;
         line-height: 1;
+        height: 16px;
       }
 
       /* ナビリンク：縦並び */
