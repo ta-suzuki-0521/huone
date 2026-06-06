@@ -121,7 +121,7 @@
       top: 22px;
       left: 50%;
       transform: translateX(-50%) scaleY(1.03);
-      transform-origin: center top;
+      transform-origin: center center;
       z-index: 20;
       font-family: 'DM Sans', sans-serif;
       font-weight: 500;
@@ -134,7 +134,7 @@
       line-height: 1;
     }
 
-    /* 長体 103% — transform-originをtopに統一してtop基準で揃える */
+    /* 長体 103% */
     .nav-menu-btn,
     .nav-close-btn,
     .nav-links a,
@@ -142,8 +142,7 @@
     .about-nav-label a {
       display: inline-block;
       transform: scaleY(1.03);
-      transform-origin: center top;
-      vertical-align: top;
+      transform-origin: center center;
     }
 
     /* ── ナビゲーション ── */
