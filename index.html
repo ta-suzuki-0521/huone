@@ -118,10 +118,9 @@
     /* ── HUONE ロゴ（中央上） ── */
     .site-logo {
       position: fixed;
-      top: 22px;
+      top: 20px;
       left: 50%;
-      transform: translateX(-50%) scaleY(1.03);
-      transform-origin: center center;
+      transform: translateX(-50%);
       z-index: 20;
       font-family: 'DM Sans', sans-serif;
       font-weight: 500;
@@ -134,15 +133,13 @@
       line-height: 1;
     }
 
-    /* 長体 103% */
+    /* nav要素 baseline統一 */
     .nav-menu-btn,
     .nav-close-btn,
     .nav-links a,
     .about-close,
     .about-nav-label a {
       display: inline-block;
-      transform: scaleY(1.03);
-      transform-origin: center center;
     }
 
     /* ── ナビゲーション ── */
@@ -169,7 +166,7 @@
     /* Menu ボタン（右上・常時表示） */
     .nav-menu-btn {
       position: fixed;
-      top: 22px;
+      top: 20px;
       right: 36px;
       z-index: 30;
       font-family: 'DM Sans', sans-serif;
@@ -202,7 +199,7 @@
     /* Close ボタン（右上） */
     .nav-close-btn {
       position: absolute;
-      top: 22px;
+      top: 20px;
       right: 36px;
       font-family: 'DM Sans', sans-serif;
       font-weight: 400;
@@ -220,7 +217,7 @@
     /* About / Books / Member / Contact リンク（左上） */
     .nav-links {
       position: absolute;
-      top: 22px;
+      top: 20px;
       left: 36px;
       display: flex;
       flex-direction: row;
@@ -388,7 +385,7 @@
       .about-nav-label { top: 20px; left: 20px; }
       .about-nav-label a { font-size: 16px; }
       .about-close,
-      .about-nav-label a { font-size: 16px !important; transform: scaleY(1.03); transform-origin: center center; line-height: 1; }
+      .about-nav-label a { font-size: 16px !important; line-height: 1; }
     }
 
     /* ── Contact用：左右に複製される円グラフィック ── */
@@ -429,7 +426,7 @@
         top: 20px;
         left: 50%;
         right: auto;
-        transform: translateX(-50%) scaleY(1.03);
+        transform: translateX(-50%);
         font-size: 16px;
         line-height: 1;
       }
