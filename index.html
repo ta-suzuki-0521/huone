@@ -391,7 +391,7 @@
     .contact-mail:hover { opacity: 0.6; }
 
     @media (max-width: 600px) {
-      .about-panel { padding: 80px 20px 100px 16px; align-items: flex-start; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+      .about-panel { padding: 80px 0 100px 16px; align-items: flex-start; overflow-y: auto; -webkit-overflow-scrolling: touch; }
       .about-inner { margin-top: 20px; }
       .about-text-ja,
       .about-text-en { font-size: 14.3px; line-height: 1.85; }
@@ -410,6 +410,11 @@
         height: 16px;
       }
       .about-nav-label a { font-size: 16px !important; line-height: 1; }
+
+      /* SP：パネルが開いている時のみinstagramアイコンを非表示 */
+      body.panel-open .instagram-link {
+        display: none;
+      }
     }
 
     /* ── Contact用：左右に複製される円グラフィック ── */
@@ -488,13 +493,21 @@
         display: none;
       }
 
-      /* SP Books：パネル内画像 */
+      /* SP Books：パネル内画像 - 左端固定・画面右端いっぱいまで */
       .books-img-sp {
         display: block;
         width: 100%;
         height: auto;
         object-fit: contain;
+        object-position: left center;
         margin: 1.5em 0;
+      }
+
+      /* SP Books：テキストも画面右端まで揃える（padding-right:0なので100%で右端） */
+      #booksPanel .about-text-ja,
+      #booksPanel .about-text-en {
+        width: 100%;
+        text-align: left;
       }
 
       /* SP：ドットグラフィックを最前面に */
