@@ -370,6 +370,11 @@
       padding-top: 0;
     }
 
+    /* SP用パネル内画像（PC版では非表示） */
+    .books-img-sp {
+      display: none;
+    }
+
     .books-text {
       text-indent: -0.5em;
       padding-left: 0.5em;
@@ -390,6 +395,9 @@
       .about-inner { margin-top: 20px; }
       .about-text-ja,
       .about-text-en { font-size: 14.3px; line-height: 1.85; }
+      /* SP版：<br>による固定改行を無効にして画面幅で自然折り返し */
+      .about-text-ja br,
+      .about-text-en br { display: none; }
       .about-close {
         top: 20px;
         right: 20px;
@@ -475,25 +483,22 @@
       }
       .nav-links a { font-size: 16px; }
 
-      /* SP Books：画像を画面中央に大きく */
+      /* SP Books：固定画像ラッパーは非表示にしてパネル内画像を使う */
       .books-img-wrap {
-        top: 50%;
-        left: 50%;
-        right: auto;
-        transform: translate(-50%, -50%);
-        width: 90vw;
-        max-width: 90vw;
-        height: auto;
-        max-height: 80vh;
+        display: none;
       }
-      .books-img {
+
+      /* SP Books：パネル内画像 */
+      .books-img-sp {
+        display: block;
         width: 100%;
         height: auto;
-        max-height: 80vh;
         object-fit: contain;
-        object-position: center center;
-        margin-left: 0;
+        margin: 1.5em 0;
       }
+
+      /* SP：ドットグラフィックを最前面に */
+      .canvas-wrap { z-index: 40; pointer-events: none; }
 
       /* SP Contact：左右の複製円を非表示 */
       .canvas-side { display: none; }
@@ -589,7 +594,7 @@
 
   <!-- Books 画像（canvas-wrapの上・テキストの下レイヤー） -->
   <div class="books-img-wrap" id="booksImgWrap">
-    <img class="books-img" src="dummy_image.jpeg" alt="HUONE">
+    <img class="books-img" src="unlabelled.image_01.jpg" alt="HUONE">
   </div>
 
   <!-- Books パネル -->
@@ -602,6 +607,8 @@
         <span style="display:block">デザイン：鈴木</span>
         <span style="display:block">編集：刈川</span>
       </p>
+      <!-- SP版のみ表示する画像 -->
+      <img class="books-img-sp" src="unlabelled.image_01.jpg" alt="HUONE">
       <p class="about-text-ja" style="margin-top:2em;">ブランディング、生産者の顔、マスコミ。<br>わかったつもりで使っている言葉ほど、<br>私たちの思考を緩やかに縛ってしまうことがあります。<br>本書は、便利なラベルとして貼られてきた言葉を対話の中で剥がし、<br>その奥にある違和感や手ざわりを探っていく一冊です。</p>
       <p class="about-text-en">Branding, "the face of the producer," the media.<br>The more we think we understand certain words,<br>the more they can quietly shape and constrain the way we think.<br>This book peels away the convenient labels<br>that have been attached to such words through conversation,<br>and explores the discomfort and texture that lie beneath.</p>
     </div>
